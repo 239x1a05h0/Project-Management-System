@@ -5,10 +5,7 @@ dotenv.config();
 const connectDB=require("./config/db");
 connectDB();
 const app=express();
-app.use(cors({
-    origin:"http://localhost:5173",
-    "https://project-management-system-3xso.onrender.com"
-}));
+app.use(cors());
 app.use(express.json());
 app.use("/api/auth",require("./routes/authRoutes"));
 app.use("/api/users",require("./routes/userRoutes"));
