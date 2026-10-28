@@ -24,9 +24,9 @@ function Teams() {
         try {
             const [teamResponse, projectResponse, userResponse] =
                 await Promise.all([
-                    axios.get("http://localhost:5000/api/teams", config),
-                    axios.get("http://localhost:5000/api/projects", config),
-                    axios.get("http://localhost:5000/api/users", config)
+                    axios.get("https://project-management-system-3xso.onrender.com/api/teams", config),
+                    axios.get("https://project-management-system-3xso.onrender.com/api/projects", config),
+                    axios.get("https://project-management-system-3xso.onrender.com/api/users", config)
                 ]);
 
             setTeams(teamResponse.data);
@@ -53,7 +53,7 @@ function Teams() {
 
         try {
             await axios.post(
-                "http://localhost:5000/api/teams",
+                "https://project-management-system-3xso.onrender.com/api/teams",
                 {
                     name,
                     description,
@@ -80,7 +80,7 @@ function Teams() {
     const deleteTeam = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:5000/api/teams/${id}`,
+                `http://https://project-management-system-3xso.onrender.com/api/teams/${id}`,
                 config
             );
 
