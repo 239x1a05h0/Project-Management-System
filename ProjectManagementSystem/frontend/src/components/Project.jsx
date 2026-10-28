@@ -38,7 +38,7 @@ function Projects() {
 
         try {
             await axios.post(
-                "http://localhost:5000/api/projects",
+                "https://project-management-system-3xso.onrender.com/api/projects",
                 { name, description, startDate, endDate },
                 config
             );
@@ -60,7 +60,7 @@ function Projects() {
     const deleteProject = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:5000/api/projects/${id}`,
+                `https://project-management-system-3xso.onrender.com/api/projects/${id}`,
                 config
             );
             loadProjects();
