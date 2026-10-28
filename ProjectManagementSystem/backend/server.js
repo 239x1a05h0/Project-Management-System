@@ -6,7 +6,8 @@ const connectDB=require("./config/db");
 connectDB();
 const app=express();
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:"http://localhost:5173",
+    "https://project-management-system-3xso.onrender.com"
 }));
 app.use(express.json());
 app.use("/api/auth",require("./routes/authRoutes"));
