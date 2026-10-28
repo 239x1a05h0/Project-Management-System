@@ -20,7 +20,7 @@ function Projects() {
     const loadProjects = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/projects",
+                "https://project-management-system-3xso.onrender.com/api/projects",
                 config
             );
             setProjects(response.data);
