@@ -27,9 +27,9 @@ function Tasks() {
         try {
             const [taskResponse, projectResponse, teamResponse] =
                 await Promise.all([
-                    axios.get("http://localhost:5000/api/tasks", config),
-                    axios.get("http://localhost:5000/api/projects", config),
-                    axios.get("http://localhost:5000/api/teams", config)
+                    axios.get("https://project-management-system-3xso.onrender.com/api/tasks", config),
+                    axios.get("https://project-management-system-3xso.onrender.com/api/projects", config),
+                    axios.get("https://project-management-system-3xso.onrender.com/api/teams", config)
                 ]);
 
             setTasks(taskResponse.data);
@@ -59,7 +59,7 @@ function Tasks() {
 
         try {
             await axios.post(
-                "http://localhost:5000/api/tasks",
+                "https://project-management-system-3xso.onrender.com/api/tasks",
                 {
                     title,
                     description,
@@ -92,7 +92,7 @@ function Tasks() {
     const updateStatus = async (id, status) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/tasks/${id}`,
+                `https://project-management-system-3xso.onrender.com/api/tasks/${id}`,
                 { status },
                 config
             );
@@ -105,7 +105,7 @@ function Tasks() {
     const deleteTask = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:5000/api/tasks/${id}`,
+                `https://project-management-system-3xso.onrender.com/api/tasks/${id}`,
                 config
             );
             loadData();
